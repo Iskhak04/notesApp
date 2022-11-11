@@ -91,6 +91,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = notesCollectionView.dequeueReusableCell(withReuseIdentifier: "NoteCell", for: indexPath) as! NoteCell
         cell.backgroundColor = .cyan
         cell.noteText.text = fetchedNotes[indexPath.row].text
+        cell.dateText.text = fetchedNotes[indexPath.row].date
         return cell
     }
     
